@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pygraphml – API documentation &#8212; PyGraphML 2.2 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="PyGraphML 2.2 documentation" href="index.html" />
+    <link rel="prev" title="Usage example" href="usage.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-pygraphml">
+<span id="pygraphml-api-documentation"></span><span id="pygraphml-reference"></span><h1><a class="reference internal" href="#module-pygraphml" title="pygraphml"><code class="xref py py-mod docutils literal"><span class="pre">pygraphml</span></code></a> &#8211; API documentation<a class="headerlink" href="#module-pygraphml" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pygraphml.Graph">
+<em class="property">class </em><code class="descclassname">pygraphml.</code><code class="descname">Graph</code><span class="sig-paren">(</span><em>name=''</em><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main class which represent a Graph</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> &#8211; name of the graph</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pygraphml.Graph.BFS">
+<code class="descname">BFS</code><span class="sig-paren">(</span><em>root=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Graph.BFS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Breadth-first search.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="http://en.wikipedia.org/wiki/Breadth-first_search">Wikipedia BFS descritpion</a></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>root</strong> &#8211; first to start the search</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">list of nodes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pygraphml.Graph.DFS_prefix">
+<code class="descname">DFS_prefix</code><span class="sig-paren">(</span><em>root=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Graph.DFS_prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Depth-first search.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="http://en.wikipedia.org/wiki/Depth-first_search">Wikipedia DFS descritpion</a></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>root</strong> &#8211; first to start the search</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">list of nodes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pygraphml.Graph.add_edge">
+<code class="descname">add_edge</code><span class="sig-paren">(</span><em>n1</em>, <em>n2</em>, <em>directed=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Graph.add_edge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pygraphml.Graph.add_edge_by_label">
+<code class="descname">add_edge_by_label</code><span class="sig-paren">(</span><em>label1</em>, <em>label2</em><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Graph.add_edge_by_label" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pygraphml.Graph.add_node">
+<code class="descname">add_node</code><span class="sig-paren">(</span><em>label=''</em><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Graph.add_node" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pygraphml.Graph.children">
+<code class="descname">children</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Graph.children" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pygraphml.Graph.edges">
+<code class="descname">edges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Graph.edges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pygraphml.Graph.get_attributs">
+<code class="descname">get_attributs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Graph.get_attributs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pygraphml.Graph.get_depth">
+<code class="descname">get_depth</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Graph.get_depth" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pygraphml.Graph.nodes">
+<code class="descname">nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Graph.nodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pygraphml.Graph.root">
+<code class="descname">root</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Graph.root" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pygraphml.Graph.set_root">
+<code class="descname">set_root</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Graph.set_root" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pygraphml.Graph.set_root_by_attribute">
+<code class="descname">set_root_by_attribute</code><span class="sig-paren">(</span><em>value</em>, <em>attribute='label'</em><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Graph.set_root_by_attribute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pygraphml.Graph.show">
+<code class="descname">show</code><span class="sig-paren">(</span><em>show_label=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Graph.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pygraphml.Node">
+<em class="property">class </em><code class="descclassname">pygraphml.</code><code class="descname">Node</code><a class="headerlink" href="#pygraphml.Node" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pygraphml.Node.children">
+<code class="descname">children</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Node.children" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pygraphml.Node.edges">
+<code class="descname">edges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Node.edges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pygraphml.Node.parent">
+<code class="descname">parent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Node.parent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pygraphml.Edge">
+<em class="property">class </em><code class="descclassname">pygraphml.</code><code class="descname">Edge</code><span class="sig-paren">(</span><em>node1</em>, <em>node2</em>, <em>directed=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Edge" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pygraphml.Edge.child">
+<code class="descname">child</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Edge.child" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pygraphml.Edge.directed">
+<code class="descname">directed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Edge.directed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pygraphml.Edge.node">
+<code class="descname">node</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Edge.node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the other node</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pygraphml.Edge.parent">
+<code class="descname">parent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Edge.parent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pygraphml.Edge.set_directed">
+<code class="descname">set_directed</code><span class="sig-paren">(</span><em>dir</em><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Edge.set_directed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pygraphml.Attribute">
+<em class="property">class </em><code class="descclassname">pygraphml.</code><code class="descname">Attribute</code><span class="sig-paren">(</span><em>name</em>, <em>value</em>, <em>type='string'</em><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Attribute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pygraphml.Item">
+<em class="property">class </em><code class="descclassname">pygraphml.</code><code class="descname">Item</code><a class="headerlink" href="#pygraphml.Item" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pygraphml.Item.attributes">
+<code class="descname">attributes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Item.attributes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pygraphml.Point">
+<em class="property">class </em><code class="descclassname">pygraphml.</code><code class="descname">Point</code><span class="sig-paren">(</span><em>x=0</em>, <em>y=0</em>, <em>z=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Point" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pygraphml.Point.vectorize">
+<code class="descname">vectorize</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.Point.vectorize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pygraphml.GraphMLParser">
+<em class="property">class </em><code class="descclassname">pygraphml.</code><code class="descname">GraphMLParser</code><a class="headerlink" href="#pygraphml.GraphMLParser" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pygraphml.GraphMLParser.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><em>fname</em><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.GraphMLParser.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pygraphml.GraphMLParser.write">
+<code class="descname">write</code><span class="sig-paren">(</span><em>graph</em>, <em>fname</em><span class="sig-paren">)</span><a class="headerlink" href="#pygraphml.GraphMLParser.write" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">PyGraphML</a></h1>
+
+
+
+
+
+
+
+
+
+
+    
+
+<p>
+<a href="https://travis-ci.org/hadim/pygraphml">
+    <img
+        alt="https://secure.travis-ci.org/hadim/pygraphml.svg?branch=master"
+        src="https://secure.travis-ci.org/hadim/pygraphml.svg?branch=master"
+    />
+</a>
+</p>
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage example</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="docutils literal"><span class="pre">pygraphml</span></code> &#8211; API documentation</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="usage.html" title="previous chapter">Usage example</a></li>
+  </ul></li>
+</ul>
+</div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014-2016, Hadrien Mary.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/reference.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
