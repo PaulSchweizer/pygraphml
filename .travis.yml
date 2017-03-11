@@ -14,7 +14,7 @@ install:
 
 # command to run tests
 script:
-    - nosetests --with-coverage --cover-erase --cover-html --cover-package=abbreviate
+    - nosetests --with-coverage --cover-erase --cover-html --cover-package=pygraphml
 
 after_success:
     - CODECLIMATE_REPO_TOKEN=a2fe1513c17c4229b813d312fbe0fae513d53980c004d4de706ddfe9e534fa12 codeclimate-test-reporter
