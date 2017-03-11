@@ -1,10 +1,4 @@
-import os
-import sys
-
 import unittest
-import mock
-
-sys.path.insert(0, 'C:\PROJECTS\DungeonCrawler\python\pygraphml')
 
 from pygraphml.praphml_yed_parser import GraphMLYedParser
 from pygraphml import Graph

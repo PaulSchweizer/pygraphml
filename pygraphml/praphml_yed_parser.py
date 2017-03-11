@@ -13,8 +13,6 @@ import ast
 from xml.dom import minidom
 
 from . import Graph
-from . import Node
-from . import Edge
 __all__ = ['GraphMLYedParser']
 
 
