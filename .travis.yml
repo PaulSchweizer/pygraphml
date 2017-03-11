@@ -17,7 +17,8 @@ before_install:
 install:
     - conda install --yes python=$TRAVIS_PYTHON_VERSION sphinx
     - pip install --user travis-sphinx
-    - "pip install -r requirements.txt"
+    - pip install --user coverage
+    - pip install --user codeclimate-test-reporter
     - python setup.py install
 
 script:
