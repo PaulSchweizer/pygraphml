@@ -16,10 +16,10 @@ before_install:
 
 # command to install dependencies
 install:
-    - "pip install -r requirements.txt"
-    - python setup.py install
+    - conda install --yes python=$TRAVIS_PYTHON_VERSION sphinx pip nose
     - pip install --user travis-sphinx
-    - conda install --yes python=$TRAVIS_PYTHON_VERSION sphinx
+    - pip install -r requirements.txt
+    - python setup.py install
 
 # command to run tests
 script:
