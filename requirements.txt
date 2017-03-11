@@ -1,1 +1,2 @@
 coverage
+codeclimate-test-reporter

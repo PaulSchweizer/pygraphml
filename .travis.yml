@@ -26,3 +26,6 @@ script:
 
 after_success:
     - if [[ $TRAVIS_PYTHON_VERSION == 3.5 ]]; then travis-sphinx deploy; fi
+
+after_success:
+- CODECLIMATE_REPO_TOKEN=a2fe1513c17c4229b813d312fbe0fae513d53980c004d4de706ddfe9e534fa12 codeclimate-test-reporter
