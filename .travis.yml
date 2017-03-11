@@ -17,9 +17,11 @@ before_install:
 install:
     - conda install --yes python=$TRAVIS_PYTHON_VERSION sphinx
     - pip install --user travis-sphinx
+    - pip install -r requirements.txt
     - python setup.py install
 
 script:
+    - nosetests --with-coverage --cover-erase --cover-html --cover-package=pygraphml
     - if [[ $TRAVIS_PYTHON_VERSION == 3.5 ]]; then travis-sphinx --source=doc/source/ build; fi
 
 after_success:
