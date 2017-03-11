@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/hadim/pygraphml.svg?branch=master)](https://travis-ci.org/hadim/pygraphml)
 [![DOI](https://zenodo.org/badge/4163/hadim/pygraphml.svg)](https://zenodo.org/badge/latestdoi/4163/hadim/pygraphml)
 [![PyPI version](https://img.shields.io/pypi/v/pygraphml.svg?maxAge=2591000)](https://pypi.org/project/pygraphml/)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/0d4f8c8a2fc341d4be05fe6203382f08)](https://www.codacy.com/app/paulschweizer/pygraphml?utm_source=github.com&utm_medium=referral&utm_content=PaulSchweizer/pygraphml&utm_campaign=Badge_Coverage)
 
 `pygraphml` is a small Python library designed to parse GraphML file. To
 see specification about GraphML, see http://graphml.graphdrawing.org/
