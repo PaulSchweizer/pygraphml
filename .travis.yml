@@ -11,22 +11,26 @@ before_install:
     - wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
     - chmod +x miniconda.sh
     - "./miniconda.sh -b"
-    - export PATH=/home/travis/miniconda3/bin:$PATH
+    # - export PATH=/home/travis/miniconda3/bin:$PATH
     - conda update --yes conda
 
 # command to install dependencies
 install:
-  - "pip install -r requirements.txt"
+    - conda install --yes python=$TRAVIS_PYTHON_VERSION sphinx
+    - pip install --user travis-sphinx
+    - "pip install -r requirements.txt"
+    - python setup.py install
 
 # command to run tests
 script:
     - nosetests --with-coverage --cover-erase --cover-html --cover-package=pygraphml
+    - if [[ $TRAVIS_PYTHON_VERSION == 3.5 ]]; then travis-sphinx --source=doc/source/ build; fi
 
 after_success:
-    - CODECLIMATE_REPO_TOKEN=a2fe1513c17c4229b813d312fbe0fae513d53980c004d4de706ddfe9e534fa12 codeclimate-test-reporter
+    - if [[ $TRAVIS_PYTHON_VERSION == 3.5 ]]; then travis-sphinx deploy; fi
+    - codeclimate-test-reporter
     - coverage xml
     - python-codacy-coverage -r coverage.xml
-
 
 
 
@@ -34,20 +38,3 @@ after_success:
 #     # The next couple lines fix a crash with multiprocessing on Travis and are not specific to using Miniconda
 #     # - sudo rm -rf /dev/shm
 #     # - sudo ln -s /run/shm /dev/shm
-
-# install:
-#     - conda install --yes python=$TRAVIS_PYTHON_VERSION sphinx
-#     - pip install --user travis-sphinx
-#     - pip install coverage
-#     - pip install codeclimate-test-reporter
-#     - python setup.py install
-
-# script:
-#     - coverage run -m nose
-#     - coverage report
-#     # - nosetests --with-coverage --cover-erase --cover-html --cover-package=pygraphml
-#     - if [[ $TRAVIS_PYTHON_VERSION == 3.5 ]]; then travis-sphinx --source=doc/source/ build; fi
-
-# after_success:
-#     - if [[ $TRAVIS_PYTHON_VERSION == 3.5 ]]; then travis-sphinx deploy; fi
-#     - CODECLIMATE_REPO_TOKEN=a2fe1513c17c4229b813d312fbe0fae513d53980c004d4de706ddfe9e534fa12 codeclimate-test-reporter
